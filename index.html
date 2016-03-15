@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Crunchinator</title>
+
+        <meta name="description" content="Crunchinator example using MobileSiteOS" />
+        <meta name="viewport" content="width=device-width" />
+
+        <link rel="stylesheet" href="../mobilesiteos/css/font_awesome.uc.css" />
+        <link rel="stylesheet" href="../mobilesiteos/ng/bootstrap/css/v336.min.css">
+        <link rel="stylesheet" href="../mobilesiteos/ng/bootstrap/css/v336_theme.min.css">
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/boilerplate.css">
+    </head>
+    <body ng-controller="AppCtrl" class="ng-scope">
+        <div id="fb-root"></div>
+
+        <div id="splash" role="splash" ng-cloak ng-if="!isMobile">
+            <div class='initializing'>
+                <div class='header-text'>
+                    Slice, Filter &amp; Explore CrunchBase Data
+                </div>
+                <video ng-if="!shared_results" preload="" width="720" height="450">
+                    <source src="./data/NYConsumerWebCosShortIntro.webm" type="video/webm">
+                    <source src="./data/NYConsumerWebCosShortIntro.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div id="main" role="main" ui-view="main" ng-cloak ng-if="!isMobile"></div>
+
+        <div id="about" role="about" ui-view="about" ng-cloak ng-if="!isMobile"></div>
+
+        <footer id="footer" ng-cloak ng-if="!isMobile">
+            <p>
+                We build new businesses for successful companies.
+                What can we build for you?
+            </p>
+        </footer>
+
+        <div class='unsupported' ng-cloak ng-if="isMobile">
+            <div class='logo'>
+                <img src="./images/logo.png"/>
+                <h1>Crunchinator</h1>
+            </div>
+            <p>Because of screen and UI constraints, the Crunchinator needs to be viewed on a traditional Mac or PC</p>
+        </div>
+
+        <script data-ng-ignore src="../mobilesiteos/msos/base.uc.js"></script>
+        <script data-ng-ignore src="../mobilesiteos/jquery/v300_msos.uc.js"></script>
+        <script data-ng-ignore src="../mobilesiteos/jquery/ui/v1120.uc.js"></script>
+        <script data-ng-ignore src="../mobilesiteos/ng/v150_msos.uc.js"></script>
+        <script data-ng-ignore src="../mobilesiteos/ng/ui/router/v0218_msos.uc.js"></script>
+        <script data-ng-ignore src="../mobilesiteos/ng/route/v150_msos.uc.js"></script>
+        <script data-ng-ignore src="../mobilesiteos/ng/bootstrap/v0130_w_tpls_msos.uc.js"></script>
+        <script data-ng-ignore src="../mobilesiteos/ng/ui/scroll/infinite.js"></script>
+
+        <script data-ng-ignore src="./scripts/jquery.droppable.js"></script>
+        <script data-ng-ignore src="./scripts/jquery.shapeshift.js"></script>
+        <script data-ng-ignore src="./scripts/angular_mocks.js"></script>
+        <script data-ng-ignore src="./scripts/affix.js"></script>
+
+        <script data-ng-ignore src="../mobilesiteos/d3/v3516.uc.js"></script>
+        <script data-ng-ignore src="./scripts/topojson.js"></script>
+        <script data-ng-ignore src="../mobilesiteos/d3/layout/cloud.js"></script>
+        <script data-ng-ignore src="./scripts/crossfilter.js"></script>
+
+        <script data-ng-ignore src="./scripts/app.js"></script>
+
+        <script data-ng-ignore src="./scripts/services/toolBox.js"></script>
+        <script data-ng-ignore src="./scripts/services/model.js"></script>
+        <script data-ng-ignore src="./scripts/services/company.js"></script>
+        <script data-ng-ignore src="./scripts/services/category.js"></script>
+        <script data-ng-ignore src="./scripts/services/investor.js"></script>
+        <script data-ng-ignore src="./scripts/services/fundingRound.js"></script>
+        <script data-ng-ignore src="./scripts/services/componentData.js"></script>
+        <script data-ng-ignore src="./scripts/services/bitly.js"></script>
+
+        <script data-ng-ignore src="./scripts/controllers/crunchinator.js"></script>
+
+        <script data-ng-ignore src="./scripts/directives/crD3Bar.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crD3Pie.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crD3Area.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crD3Map.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crListSelect.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crDragArrange.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crPlaceholder.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crWaitThenScroll.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crAffix.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crFbShare.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crEmailShare.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crTwitterShare.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crCrunchNav.js"></script>
+        <script data-ng-ignore src="./scripts/directives/crPopOpen.js"></script>
+
+        <script data-ng-ignore>
+            // Bootstrap our simple demo
+            angular.bootstrap('body', ['crunchinatorApp']);
+        </script>
+    </body>
+</html>

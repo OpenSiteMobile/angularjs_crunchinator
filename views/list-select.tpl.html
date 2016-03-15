@@ -1,0 +1,48 @@
+<div class="data-set-container">
+    <div class="head">
+        <div class="drag-handle"></div>
+        <h3>{{chartTitle}}</h3>
+        <p class="count">
+            {{items.length}} of {{total}}
+        </p>
+    </div>
+    <div class="select-list textlist clear-both">
+        <div ng-show="showSearch" class="form-group">
+            <div class="controls">
+                <div class="data">
+                    <input type="text" placeholder="Search {{chartTitle}}" class="form-control"
+                        ng-model="selectedItem"
+                        typeahead-min-length="2"
+                        typeahead-wait-ms="200"
+                        typeahead-on-select="selectItem()"
+                        typeahead="item as item.name for item in items | filter:{name: $viewValue} | limitTo: 5"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="dataset">
+            <table class="table" infinite-scroll="updateScrollItems()" infinite-scroll-distance="2">
+                <tbody>
+                    <tr ng-repeat="item in selectedShownItems"  class="selected">
+                        <td>
+                            <div class="list-item" ng-click="removeItem(item)">{{ item.display_name || item.name}}</div>
+                            <a ng-if="link" class="permalink" target="_blank" href="http://crunchbase.com/{{ item.investor_type.replace('_', '-') || 'company' }}/{{item.permalink}}">
+                                <i class="pull-right fa fa-external-link"></i>
+                            </a>
+                            <span ng-if="count" class="pull-right model-count">{{ item.model_count }}</span>
+                        </td>
+                    </tr>
+                    <tr ng-if="selectedItems.indexOf(item) < 0" ng-repeat="item in scrollItems" >
+                        <td>
+                            <div class="list-item" ng-click="selectItem(item)">{{ item.display_name || item.name}}</div>
+                            <a ng-if="link" class="permalink" target="_blank" href="http://crunchbase.com/{{ item.investor_type.replace('_', '-') || 'company' }}/{{item.permalink}}">
+                                <i class="pull-right fa fa-external-link"></i>
+                            </a>
+                            <span ng-if="count" class="pull-right model-count">{{ item.model_count }}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

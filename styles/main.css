@@ -1,0 +1,939 @@
+
+.ng-cloak,
+[ng-cloak],
+[ng\:cloak] {
+    display: none!important
+}
+.data-set-container:hover .brush {
+    display: block!important
+}
+.unsupported {
+    font-size: 20px;
+    color: #eee;
+    text-align: center;
+    padding: 20px 0
+}
+.unsupported .logo {
+    margin-bottom: 50px
+}
+.hero {
+    background: url(../images/burner.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 22px
+}
+.hero .banner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -150px;
+    background: rgba(0, 0, 0, .6);
+    padding: 50px 0
+}
+.hero .logo h1 {
+    display: inline-block;
+    padding-bottom: 15px;
+    margin: 0;
+    margin-left: 10px
+}
+.hero .logo img {
+    vertical-align: bottom
+}
+.hero .message {
+    margin-top: 50px
+}
+@-webkit-keyframes bounce {
+    0%, 100%, 2%, 5%, 8% {
+        top: 0
+    }
+    4% {
+        top: -12px
+    }
+    6% {
+        top: -6px
+    }
+}
+.bounce {
+    position: relative;
+    -webkit-animation: bounce 20s infinite 1s;
+    -ms-animation: bounce 20s infinite 1s;
+    animation: bounce 20s infinite 1s
+}
+.brush .resize .limit {
+    fill: #60beff
+}
+.brush .resize .range {
+    fill: #60beff;
+    stroke: #fff;
+    stroke-width: 2px
+}
+.brush .resize .range_text {
+    fill: #fff;
+    font-size: 12px;
+    text-align: center;
+    text-anchor: middle
+}
+.selected {
+    fill: brown
+}
+html {
+    height: 100%;
+    overflow: hidden
+}
+body {
+    background-color: #3d3d3d;
+    background-image: url(../images/background-noise.png);
+    height: 100%;
+    overflow: hidden
+}
+.spacing-med {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+.clear-both {
+    clear: both
+}
+.drag-contain {
+    position: relative
+}
+.drag-contain>div {
+    height: 390px;
+    width: 390px;
+    position: absolute
+}
+.drag-contain .ss-dragged-child {
+    background: 0 0
+}
+.drag-contain .ss-placeholder-child {
+    background: 0 0;
+    border: 1px dashed gray
+}
+.brush .extent {
+    fill-opacity: 0
+}
+.data-set-container .placeholder {
+    text-align: center;
+    line-height: 270px;
+    font-size: 55px;
+    background: #666;
+    margin: 0
+}
+#main {
+    position: relative;
+    min-height: 300px
+}
+#main .continue {
+    text-align: center;
+    line-height: 300px;
+    padding-bottom: 0;
+    font-size: 22px;
+    color: #cdebff
+}
+header {
+    padding-bottom: 15px
+}
+header .row {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #60beff
+}
+header img {
+    display: inline;
+    float: left
+}
+header .header-text {
+    margin-left: 30px;
+    float: left
+}
+header .header-text h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: BebasNeue;
+    font-size: 68px
+}
+header .header-text h1 a {
+    color: #cdebff
+}
+header .header-text h1 a span {
+    color: #fff
+}
+header .header-text h2 {
+    margin-top: 0;
+    font-size: 13px;
+    color: #fff
+}
+.brush .resize .handle {
+    fill: #60beff;
+    stroke: #fff;
+    stroke-width: 2px
+}
+.count {
+    margin-top: 25px;
+    display: none
+}
+.hq-map {
+    width: 100%;
+    height: 100%;
+    min-height: 360px
+}
+.data-set-container {
+    background-color: #2c3136;
+    padding-bottom: 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .3)
+}
+.data-set-container .head {
+    overflow: auto;
+    padding: 0 15px;
+    background: #343a40;
+    border-bottom: 1px inset #272b30;
+    cursor: move
+}
+.data-set-container .drag-handle,
+.data-set-container .settings-button {
+    margin-bottom: 0;
+    background: #343a40;
+    display: none;
+    position: absolute;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    top: 7px
+}
+.data-set-container .drag-handle {
+    background-image: url(../images/drag-n-drop-handle.png);
+    left: 6px
+}
+.data-set-container .settings-button {
+    background-image: url(../images/settings-gear.png);
+    background-image: url(../images/drag-n-drop-handle.png);
+    right: 6px
+}
+.data-set-container h3 {
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    vertical-align: bottom;
+    text-align: center;
+    padding: 16px 0;
+    margin: 0
+}
+.data-set-container p {
+    color: #fff
+}
+.data-set-container .textlist {
+    margin: 0 15px
+}
+.data-set-container .form-group {
+    margin: 10px 0
+}
+.data-set-container .dataset {
+    overflow-y: scroll;
+    background-color: transparent;
+    color: #d5d5d5;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    font-weight: 600
+}
+.data-set-container .textlist tr td {
+    position: relative;
+    padding: 0;
+    border-top: 0;
+    font-size: 15px
+}
+.data-set-container .textlist .permalink {
+    display: none;
+    color: #bbb;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+    right: 40px;
+    top: 12px
+}
+.data-set-container .textlist tr:hover .permalink {
+    display: inline
+}
+.data-set-container .textlist a:hover {
+    color: #eee
+}
+.data-set-container .textlist tr:hover {
+    color: #fff
+}
+.data-set-container .textlist .dataset tr.selected {
+    color: #67BEFD
+}
+.data-set-container .input-group {
+    display: block
+}
+.data-set-container input {
+    border: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #5f6973;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    font-weight: 600;
+    border-radius: 6px;
+    border-top-right-radius: 6px!important;
+    border-bottom-right-radius: 6px!important;
+    font-size: 15px!important
+}
+.data-set-container::-webkit-scrollbar {
+    display: none
+}
+.data-set-container:hover .drag-handle,
+.data-set-container:hover .settings-button {
+    display: block
+}
+.remove-selected {
+    text-align: right
+}
+.axis {
+    font: 10px sans-serif
+}
+.axis line,
+.axis path {
+    fill: none;
+    shape-rendering: crispEdges
+}
+.value {
+    font: 10px sans-serif;
+    color: #fff
+}
+.x.axis path {
+    height: 0
+}
+.state {
+    cursor: pointer
+}
+.overlay {
+    fill: none;
+    pointer-events: all
+}
+.county-boundary,
+.state-boundary {
+    fill: none;
+    stroke: #41484C;
+    stroke-linejoin: round;
+    stroke-linecap: round
+}
+.alert-scream {
+    background-color: #ff0
+}
+.dataset td>div {
+    padding: 4px
+}
+.dataset .model-count,
+.dataset td>a {
+    position: absolute;
+    right: 14px;
+    top: 9px
+}
+.list-item {
+    cursor: pointer
+}
+#about,
+#splash {
+    display: block;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif
+}
+#about {
+    font-size: 24px
+}
+#about .about-contain {
+    height: 135px
+}
+#about #about-header {
+    width: 100%;
+    background: #fff;
+    z-index: 100
+}
+#about #about-header .forkme {
+    right: 0;
+    position: absolute
+}
+#about #about-header .header-text {
+    margin: 0 auto;
+    max-width: 1080px;
+    overflow: auto;
+    overflow-y: visible;
+    padding: 10px 0
+}
+#about #about-header li,
+#about #about-header nav,
+#about #about-header ul {
+    display: inline
+}
+#about #about-header ul {
+    float: right
+}
+#about #about-header li {
+    list-style-type: none;
+    margin-left: 20px
+}
+#about #about-header li a {
+    color: #3f4143;
+    text-decoration: none
+}
+#about #about-header li.active a {
+    color: #fff;
+    text-decoration: none
+}
+@media screen and (max-width: 800px) {
+    #about #about-header {
+        padding: 30px 20px
+    }
+}
+#about #about-header.affix {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .35)
+}
+#about #contact-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #27292d
+}
+#about #contact-us p {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    padding: 0 20px
+}
+#about #contact-us a {
+    padding: 10px 40px;
+    border-radius: 40px;
+    background-color: #f6d64f;
+    display: inline-block;
+    color: #404041;
+    text-decoration: none
+}
+#about #pop-quiz h3 {
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    font-weight: 600
+}
+#about #pop-quiz .ellipsis {
+    display: inline
+}
+#about #pop-quiz .continuation,
+#about #pop-quiz button {
+    display: none
+}
+#about #pop-quiz .triangle {
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    background: url(../images/triangle_white.png) no-repeat;
+    height: 25px;
+    width: 13px;
+    margin-top: -13px
+}
+#about #pop-quiz ul {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    border-left: solid 5px #ededed;
+    max-width: 800px
+}
+#about #pop-quiz ul li {
+    box-shadow: #ededed 0 2px 4px 0;
+    color: #959597;
+    text-align: left;
+    padding: 70px 40px 70px 135px;
+    margin: 10px 0;
+    border: solid 1px #ededed;
+    border-radius: 5px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style-type: none;
+    position: relative;
+    background: #fff 20px center no-repeat;
+    -webkit-transition: color 1s, background-color 1s
+}
+#about #pop-quiz ul li:before {
+    box-shadow: #ededed 0 2px 4px 0;
+    content: " ";
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ededed;
+    position: absolute;
+    top: 50%;
+    left: -54px;
+    margin-top: -10px
+}
+#about #pop-quiz ul li.active:before {
+    background-color: #2b8fff
+}
+#about #pop-quiz ul li.active {
+    background-color: #2b8fff;
+    background-image: url(../images/check_mark.png);
+    color: #fff
+}
+#about #pop-quiz ul li.active .triangle {
+    background: url(../images/triangle_blue.png) no-repeat
+}
+#about #pop-quiz ul li.active .ellipsis {
+    display: none
+}
+#about #pop-quiz ul li.active .continuation,
+#about #pop-quiz ul li.active button {
+    display: inline
+}
+#about #pop-quiz ul li.active button {
+    background-color: #fff;
+    color: #2b8fff;
+    padding: 5px 30px;
+    border-radius: 5px;
+    width: auto;
+    border: 0;
+    margin: 50px 0 10px
+}
+#about #faq {
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif
+}
+#about #faq h4 {
+    text-align: center;
+    font-size: 20px;
+    color: #3f4143;
+    margin-bottom: 80px;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif
+}
+#about #faq p {
+    padding: 0
+}
+#about #faq h5 {
+    font-size: 16px;
+    color: #3f4143;
+    margin-bottom: 30px;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif
+}
+#about #faq ul {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 0;
+    text-align: center
+}
+#about #faq ul li {
+    list-style-type: none;
+    text-align: center;
+    display: inline;
+    margin: 0 5px
+}
+@media screen and (max-width: 800px) {
+    #about #faq ul li {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px
+    }
+}
+#about #faq hr {
+    width: 400px;
+    margin-bottom: 70px
+}
+#about #faq button {
+    background-color: #1ac26a;
+    color: #fff;
+    padding: 20px 0;
+    width: 320px;
+    border: 0;
+    font-size: 20px;
+    border-radius: 5px
+}
+#about #faq button:focus {
+    border: 0
+}
+#about #faq button.blue {
+    background-color: #00bffa
+}
+#about #faq p {
+    color: #afafaf;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 32px
+}
+#about #contact-us,
+#about #pop-quiz,
+#about h3,
+#about p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 70px
+}
+#about h2 {
+    color: #1861b2;
+    font-size: 26px;
+    font-weight: 400;
+    float: left;
+    font-family: futura-pt-1, futura-pt-2, Arial, sans-serif;
+    letter-spacing: 1px;
+    background: url(../images/cloudspace-logo-blue-and-white.png) 0 0 no-repeat;
+    padding: 5px 0 0 95px;
+    margin: 0;
+    line-height: 45px
+}
+#about h3 {
+    color: #54575c;
+    font-size: 32px;
+    font-weight: 200;
+    max-width: 780px;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif
+}
+#about p {
+    color: #5e5e5e;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 865px;
+    padding: 0 20px
+}
+#about em {
+    color: #1961b2;
+    font-size: inherit;
+    font-weight: 900;
+    font-style: normal
+}
+#about strong {
+    color: #4a4b50;
+    font-size: inherit;
+    font-weight: 900
+}
+footer {
+    text-align: center;
+    background: #1861b2 url(../images/large-cloudspace-logo-blue.png) right top no-repeat;
+    background-position: right 65px;
+    color: #fff;
+    margin: 0
+}
+footer p,
+footer ul {
+    margin-left: auto;
+    margin-right: auto
+}
+footer a,
+footer a:hover {
+    color: #fff
+}
+footer p {
+    max-width: 800px;
+    font-size: 48px;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    font-weight: 600;
+    line-height: 48px;
+    padding-top: 90px
+}
+footer ul {
+    display: inline-block;
+    padding: 40px 0 60px
+}
+footer ul li {
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    font-size: 30px;
+    list-style-type: none;
+    padding: 0 15px;
+    display: inline
+}
+@media screen and (max-width: 700px) {
+    footer ul li {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px
+    }
+}
+footer ul li:last-of-type {
+    border-left: solid 3px #fff
+}
+@media screen and (max-width: 700px) {
+    footer ul li:last-of-type {
+        border: 0
+    }
+}
+#splash {
+    background: url(../images/burner.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: -64px;
+    text-align: center
+}
+#splash .forkme {
+    position: absolute;
+    right: 0;
+    z-index: 100
+}
+#splash .initializing {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -345px
+}
+#splash .header-text {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 42px;
+    line-height: 37px;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+    font-weight: 600
+}
+#nav {
+    display: block;
+    width: 100%;
+    height: 103px;
+    overflow: visible;
+    color: #fff;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    margin-bottom: 20px
+}
+#nav .movable {
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .35);
+    width: 100%;
+    z-index: 100
+}
+#nav .movable.affix-top {
+    position: relative
+}
+#nav .movable.affix {
+    position: fixed;
+    top: 1px
+}
+#nav .movable.affix .back {
+    margin-top: -1px
+}
+#nav .movable.affix-bottom {
+    position: absolute
+}
+#nav .back {
+    background: #232528
+}
+#nav nav {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 11px 0;
+    position: relative
+}
+#nav i.fa-angle-double-down {
+    font-size: 44px;
+    margin: 0 40px;
+    vertical-align: top
+}
+#nav .movealong {
+    font-size: 35px;
+    line-height: 44px
+}
+#nav a {
+    text-decoration: none
+}
+#nav .logo {
+    position: absolute;
+    left: 0
+}
+#nav .logo img {
+    width: 54px;
+    height: 39px;
+    cursor: pointer;
+    vertical-align: top
+}
+#nav .logo h1 {
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-left: 15px;
+    display: inline
+}
+#nav .logo h1 a:active,
+#nav .logo h1 a:hover,
+#nav .logo h1 a:link,
+#nav .logo h1 a:visited {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none
+}
+#nav .share ul,
+#nav .status ul {
+    margin: 0;
+    padding: 0
+}
+#nav .share li,
+#nav .status li {
+    list-style-type: none;
+    display: inline-block
+}
+#nav .status {
+    text-align: center;
+    width: 600px;
+    margin-left: 225px
+}
+#nav .status .amount-counter li {
+    padding: 0 20px
+}
+#nav .share {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #abacb5
+}
+#nav .share p {
+    display: inline
+}
+#nav .share ul {
+    padding-left: 5px;
+    display: inline
+}
+#nav .share li {
+    padding-left: 7px;
+    padding-top: 2px
+}
+#nav .share li button {
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    width: 75px;
+    text-align: right;
+    display: inline-block;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
+    color: #fff;
+    padding-left: 10px;
+    white-space: nowrap;
+    border: 0
+}
+#nav .share li button i {
+    padding-right: 5px;
+    font-weight: 100
+}
+#nav .share li.facebook button {
+    background: #2a508a;
+    background: linear-gradient(to bottom, #5078b3 0, #385f99 100%)
+}
+#nav .share li.facebook button:hover {
+    opacity: .9;
+    text-decoration: none
+}
+#nav .share li.twitter button {
+    background: #1ec6f8;
+    background: linear-gradient(to bottom, #70d9f8 0, #1cc6f8 100%)
+}
+#nav .share li.twitter button:hover {
+    opacity: .9;
+    text-decoration: none
+}
+#nav .share li.email button {
+    background: #383d44;
+    background: linear-gradient(to bottom, #494b58 0, #343a40 100%)
+}
+#nav .share li.email button:hover {
+    opacity: .9;
+    text-decoration: none
+}
+#nav .amount-counter {
+    color: #abacb5;
+    font-size: 16px;
+    font-weight: 600
+}
+#nav .amount-count {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    vertical-align: middle;
+    padding-right: 10px
+}
+#filters {
+    width: 100%;
+    background: #2d2f33
+}
+#filters ul {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0
+}
+#filters li {
+    list-style-type: none;
+    display: inline-block;
+    min-width: 150px;
+    position: relative;
+    font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    padding: 8px 0;
+    margin: 0
+}
+#filters li .filter_type {
+    color: #5d6065;
+    background: url(../images/filter-type.png);
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    padding-right: 2px
+}
+#filters li .filter_name {
+    color: #b4b5be
+}
+#filters li .filter_remove {
+    background: url(../images/filter-remove-sprite.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px
+}
+#filters li .filter_remove:hover {
+    background-position: 0 -20px
+}
+.loading {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    color: #60beff;
+    line-height: 42px;
+    text-shadow: 0 0 20px rgba(200, 200, 200, .5);
+    -webkit-animation: opacity-pulsate 2s linear;
+    -webkit-animation-iteration-count: infinite
+}
+@-webkit-keyframes pulsate {
+    0% {
+        text-shadow: 0 0 20px #fff
+    }
+    50% {
+        text-shadow: 0 0 0 rgba(255, 255, 255, .5)
+    }
+    100% {
+        text-shadow: 0 0 20px #fff
+    }
+}
+@-webkit-keyframes opacity-pulsate {
+    0% {
+        opacity: .5
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: .5
+    }
+}
+.special .drag-handle,
+.special .head {
+    background-color: #5a83a0
+}
